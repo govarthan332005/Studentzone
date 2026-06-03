@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="StudentsZone - Discover Internships, Scholarships & Jobs for Students" />
+<title>StudentsZone — Internships, Scholarships & Jobs</title>
+
+<!-- Premium Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS Animation -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-circle"></div>
+    <p>StudentsZone</p>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span>Students<span class="logo-accent">Zone</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#internships" class="nav-link"><i class="fa-solid fa-briefcase"></i> Internships</a></li>
+      <li><a href="#scholarships" class="nav-link"><i class="fa-solid fa-award"></i> Scholarships</a></li>
+      <li><a href="#jobs" class="nav-link"><i class="fa-solid fa-building"></i> Jobs</a></li>
+      <li><a href="admin.html" class="nav-link admin-link"><i class="fa-solid fa-user-shield"></i> Admin</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge" data-aos="fade-down">
+      <i class="fa-solid fa-sparkles"></i> Your Gateway to Opportunities
+    </div>
+    <h1 class="hero-title" data-aos="fade-up">
+      Discover Your Next <br>
+      <span class="gradient-text">Big Opportunity</span>
+    </h1>
+    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+      Explore handpicked internships, scholarships, and jobs curated for students like you.
+      Apply easily and take the first step toward your dream career.
+    </p>
+    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+      <a href="#internships" class="btn btn-primary">
+        <i class="fa-solid fa-rocket"></i> Explore Now
+      </a>
+      <a href="#scholarships" class="btn btn-outline">
+        <i class="fa-solid fa-graduation-cap"></i> Scholarships
+      </a>
+    </div>
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+      <div class="stat-card">
+        <div class="stat-number" id="statInternships">0</div>
+        <div class="stat-label"><i class="fa-solid fa-briefcase"></i> Internships</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statScholarships">0</div>
+        <div class="stat-label"><i class="fa-solid fa-award"></i> Scholarships</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statJobs">0</div>
+        <div class="stat-label"><i class="fa-solid fa-building"></i> Jobs</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="mouse"><div class="wheel"></div></div>
+  </div>
+</section>
+
+<!-- Internships -->
+<section class="section" id="internships">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Internships</span>
+      <h2 class="section-title">Top <span class="gradient-text">Internships</span> For You</h2>
+      <p class="section-subtitle">Gain real-world experience and kickstart your career with these amazing internship opportunities.</p>
+    </div>
+    <div class="search-bar" data-aos="fade-up">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInternships" placeholder="Search internships by title, company, or location...">
+    </div>
+    <div class="cards-grid" id="internshipsGrid">
+      <div class="loading-state"><div class="spinner"></div><p>Loading internships...</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scholarships -->
+<section class="section section-alt" id="scholarships">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag tag-purple"><i class="fa-solid fa-award"></i> Scholarships</span>
+      <h2 class="section-title">Premium <span class="gradient-text-purple">Scholarships</span></h2>
+      <p class="section-subtitle">Fund your education with these exclusive scholarship opportunities curated for ambitious students.</p>
+    </div>
+    <div class="search-bar" data-aos="fade-up">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchScholarships" placeholder="Search scholarships by name, provider, or eligibility...">
+    </div>
+    <div class="cards-grid" id="scholarshipsGrid">
+      <div class="loading-state"><div class="spinner"></div><p>Loading scholarships...</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Jobs -->
+<section class="section" id="jobs">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag tag-orange"><i class="fa-solid fa-building"></i> Jobs</span>
+      <h2 class="section-title">Latest <span class="gradient-text-orange">Job</span> Openings</h2>
+      <p class="section-subtitle">Land your dream job with these freshly curated openings from top companies.</p>
+    </div>
+    <div class="search-bar" data-aos="fade-up">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchJobs" placeholder="Search jobs by title, company, or location...">
+    </div>
+    <div class="cards-grid" id="jobsGrid">
+      <div class="loading-state"><div class="spinner"></div><p>Loading jobs...</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Students<span class="logo-accent">Zone</span></span>
+      </div>
+      <p>Empowering students with curated opportunities to build a brighter future.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="#internships">Internships</a>
+      <a href="#scholarships">Scholarships</a>
+      <a href="#jobs">Jobs</a>
+    </div>
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 StudentsZone. Crafted with <i class="fa-solid fa-heart" style="color:#ff4d6d"></i> for students.</p>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Firebase + Scripts -->
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="app.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 800, once: true, offset: 80 });</script>
+
+</body>
+</html>
